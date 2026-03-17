@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📱 Lista de Contatos</h1>
+
+        <div class="card">
+            <h2>Primeiro Contato</h2>
+            <p id="primeiro"></p>
+        </div>
+
+        <div class="card">
+            <h2>Último Contato</h2>
+            <p id="ultimo"></p>
+        </div>
+    </div>
+
+    <script>
+        let contatos = [
+            {
+                name: "Maxwell Wright",
+                phone: "(0191) 719 6495",
+                email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+            },
+            {
+                name: "Raja Villarreal",
+                phone: "0866 398 2895",
+                email: "posuere.vulputate@sed.com"
+            },
+            {
+                name: "Helen Richards",
+                phone: "0800 1111",
+                email: "libero@convallis.edu"
+            }
+        ];
+
+        let novoContato = {
+            name: "Maisie Haley",
+            phone: "0913 531 303",
+            email: "risus.Quisque@urna.ca"
+        };
+
+        contatos.push(novoContato);
+
+        let primeiro = contatos[0];
+        document.getElementById("primeiro").innerHTML =
+            `Nome: ${primeiro.name} Celular: ${primeiro.phone} Email: ${primeiro.email}`;
+
+        let ultimoIndex = contatos.length - 1;
+        let ultimo = contatos[ultimoIndex];
+
+        document.getElementById("ultimo").innerHTML =
+            `Nome: ${ultimo.name} Celular: ${ultimo.phone} Email: $${ultimo.email}`;
+    </script>
+
+</body>
+</html>
